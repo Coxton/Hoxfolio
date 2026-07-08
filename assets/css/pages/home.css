@@ -1,0 +1,120 @@
+.main-content{
+    width: 100%;
+    max-width: 1650px;
+    margin: auto;
+}
+
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    margin: 35px 0;
+    justify-content: center;
+}
+
+.page-title {
+    font-size: 55px;
+    letter-spacing: 8.5px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: auto;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 22px;
+}
+
+.scroll-hint {
+    text-align: center;
+    margin-top: auto;
+    font-size: 20px;
+    margin: auto;
+}
+
+.container{
+    margin: 50px 0;
+}
+
+.container .inner{
+    padding: 10px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.line-text{
+    letter-spacing: 2.5px;
+    line-height: 1.5;
+}
+
+.line-subtext{
+    letter-spacing: 2.5px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.text-head{
+    letter-spacing: 2.5px;   
+}
+
+.text-head a{
+    text-decoration: none;
+    color: #d1d1d1;
+    letter-spacing: 2.5px;
+    transition: .3s ease-in-out;
+}
+
+.text-head a:hover{
+    color: #8C6EF2;
+}
+
+.work{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.work-head {
+  width: 100%;
+}
+
+.main-footer {
+margin-top: 75px;
+padding: 15px;
+}
+
+.footer-column {
+border-top: 1px solid #d1d1d1;
+}
+
+.footer-subtitle{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    letter-spacing: 2.5px;
+    line-height: 2.5;
+}
+
+.list-item{
+    list-style: none;
+}
+
+.list-item .menu-link{
+    transition: .3s ease-in-out;
+    font-size: 20px;
+    letter-spacing: 2.5px;
+    line-height: 2.5;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 0;
+}

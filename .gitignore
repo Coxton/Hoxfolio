@@ -1,0 +1,50 @@
+# -------------------------
+# IDE
+# -------------------------
+.vscode/
+.idea/
+
+# -------------------------
+# Operating System
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Environment Variables
+# -------------------------
+.env
+
+# -------------------------
+# Logs
+# -------------------------
+storage/logs/*
+!storage/logs/.gitkeep
+
+# -------------------------
+# Cache
+# -------------------------
+storage/cache/*
+!storage/cache/.gitkeep
+
+# -------------------------
+# User Uploads
+# -------------------------
+storage/uploads/*
+!storage/uploads/.gitkeep
+
+# -------------------------
+# Composer
+# -------------------------
+vendor/
+
+# -------------------------
+# Node.js (if you use npm later)
+# -------------------------
+node_modules/
+
+# -------------------------
+# Build files (optional)
+# -------------------------
+dist/
+build/
