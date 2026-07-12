@@ -16,6 +16,12 @@ Thumbs.db
 .env
 
 # -------------------------
+# Config
+# -------------------------
+config/database.php
+
+
+# -------------------------
 # Logs
 # -------------------------
 storage/logs/*
@@ -42,9 +48,3 @@ vendor/
 # Node.js (if you use npm later)
 # -------------------------
 node_modules/
-
-# -------------------------
-# Build files (optional)
-# -------------------------
-dist/
-build/
