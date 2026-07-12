@@ -1,3 +1,8 @@
 <?php
-$_GET['page'] = $_GET['page'] ?? 'home';
-require "router.php";
+
+require_once 'app/Core/Router.php';
+
+use App\Core\Router;
+
+$router = new Router();
+$router->run();
