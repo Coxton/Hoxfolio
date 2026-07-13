@@ -4,40 +4,45 @@ namespace App\Core;
 
 class Router
 {
-    private string $viewDirectory;
-    private string $layout;
-
-    public function __construct(
-        string $viewDirectory = 'views',
-        string $layout = 'layouts/default.php'
-    ) {
-        $this->viewDirectory = rtrim($viewDirectory, '/');
-        $this->layout = $layout;
-    }
 
     public function run(): void
     {
-        
         $page = filter_input(INPUT_GET, 'page') ?: 'home';
+        $page = trim($page, '/');
 
-        
-        $page = basename($page);
+        $isAdmin = str_starts_with($page, 'admin');
 
-        
-        $viewPath = "{$this->viewDirectory}/{$page}.php";
+        if ($isAdmin) {
 
-        
-        if (!file_exists($viewPath)) {
-            http_response_code(404);
-            $viewPath = "{$this->viewDirectory}/404.php";
+            
+            $page = preg_replace('#^admin/?#', '', $page);
+
+            
+            if ($page === '') {
+                $page = 'dashboard';
+            }
+
+            $viewDirectory = 'admin/views';
+            $layout = 'admin/layouts/default.php';
+
+        } else {
+
+            $viewDirectory = 'views';
+            $layout = 'layouts/default.php';
+
         }
 
-        
+        $viewPath = "{$viewDirectory}/{$page}.php";
+
+        if (!file_exists($viewPath)) {
+            http_response_code(404);
+            $viewPath = "{$viewDirectory}/404.php";
+        }
+
         ob_start();
         include $viewPath;
         $content = ob_get_clean();
 
-        
-        include $this->layout;
+        include $layout;
     }
 }
