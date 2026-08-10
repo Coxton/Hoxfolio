@@ -22,7 +22,7 @@
     <meta name="theme-color" content="#000000" />
 
     <!-- Favicon + Manifest -->
-    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
 
